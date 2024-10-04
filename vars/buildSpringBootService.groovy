@@ -5,6 +5,11 @@ pipeline {
            maven 'M3'
            jdk "${config.jdkVersion}"
        }
+       parameters {
+         booleanParam name: 'ENV_IS_PROD', defaultValue: false
+       }
+
+       
        stages {
            stage("Tools initialization") {
                steps {
