@@ -3,4 +3,4 @@ def call(Map config = [:]){
 }
 
 
-def isRecursive(def defined) = defined ? "-lRa" : "-la"
+def isRecursive(def defined) { defined ? "-lRa" : "-la" }
